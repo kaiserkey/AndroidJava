@@ -35,7 +35,7 @@ public class MainActivityViewModel extends AndroidViewModel {
             resultado.setValue(res);
         }
         catch (NumberFormatException e){
-            Toast.makeText(context, "Solo puedes ingresar numeros", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "Solo puedes ingresar numeros enteros", Toast.LENGTH_LONG).show();
         }
 
     }
