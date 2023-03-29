@@ -19,7 +19,7 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     public MainActivityViewModel(@NonNull Application application) {
         super(application);
-        context = application.getContext();
+        context = application.getApplicationContext();
         traductor.put("casa","house");
         traductor.put("perro", "dog");
         traductor.put("arbol", "tree");
