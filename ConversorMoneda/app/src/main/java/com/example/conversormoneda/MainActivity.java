@@ -5,6 +5,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.conversormoneda.databinding.ActivityMainBinding;
 
@@ -27,8 +28,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        binding.btnConvert.setOnClickListener(view -> {
-            viewModel.convert();
+        binding.btnConvert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String option = "";
+                if(binding.radioDE.hasFocus()){
+                    option = "dolar";
+                }
+                if(binding.radioED.hasFocus()){
+                    option = "euro";
+                }
+                viewModel.convert(binding.inputDolares.toString(),binding.inputEuros.toString(), option);
+            }
         });
 
 
