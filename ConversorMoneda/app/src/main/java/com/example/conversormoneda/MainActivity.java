@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 binding.radioED.setChecked(false);
                 binding.inputDolares.setEnabled(true);
+                binding.inputEuros.setEnabled(false);
+
             }
         });
 
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 binding.radioDE.setChecked(false);
                 binding.inputEuros.setEnabled(true);
+                binding.inputDolares.setEnabled(false);
             }
         });
 
