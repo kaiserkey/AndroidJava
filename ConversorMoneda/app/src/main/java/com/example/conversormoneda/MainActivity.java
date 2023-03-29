@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 if(binding.radioED.hasFocus()){
                     option = "euro";
                 }
-                viewModel.calcular(binding.inputDolares.toString(),binding.inputEuros.toString(), option);
+                viewModel.calcular(binding.inputDolares.getText().toString(),binding.inputEuros.getText().toString(), option);
             }
         });
 
