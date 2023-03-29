@@ -7,12 +7,55 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/textTitulo"
+        android:layout_width="196dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:text="Traductor"
+        android:textAlignment="center"
+        android:textColor="#9C27B0"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/inputPalabra"
+        android:layout_width="284dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Ingresa una palabra en español"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitulo" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4CAF50"
+        android:text="Traducir"
+        android:textColor="#9C27B0"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPalabra"
+        app:layout_constraintVertical_bias="0.127" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintVertical_bias="0.162" />
 </androidx.constraintlayout.widget.ConstraintLayout>
