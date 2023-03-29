@@ -1,6 +1,7 @@
 package com.example.conversormoneda;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -18,6 +19,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(MainActivityViewModel.class);
+
+        viewModel.getResultado().observe(this, new Observer<Double>() {
+            @Override
+            public void onChanged(Double convert) {
+                result.setText(convert+"");
+            }
+        });
+
+        binding.btnConvert.setOnClickListener(view -> {
+            viewModel.convert();
+        });
+
 
     }
 }
