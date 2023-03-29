@@ -28,16 +28,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+//        viewModel.getRadio().observe(this, new Observer<Boolean>(){
+//            @Override
+//            public void onChanged(Boolean convert) {
+//                binding.radioED
+//            }
+//        });
+
+        binding.radioDE.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.radioED.setChecked(false);
+            }
+        });
+
+        binding.radioED.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.radioDE.setChecked(false);
+            }
+        });
+
         binding.btnConvert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String option = "";
                 if(binding.radioDE.isChecked()){
-                    binding.radioED.setChecked(false);
+
                     option = "D";
                 }
                 if(binding.radioED.isChecked()){
-                    binding.radioDE.setChecked(false);
+
                     option = "E";
                 }
                 viewModel.calcular(binding.inputDolares.getText().toString(),binding.inputEuros.getText().toString(), option);
