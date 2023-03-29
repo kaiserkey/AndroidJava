@@ -39,16 +39,18 @@ public class MainActivityViewModel extends AndroidViewModel {
         try {
             double dolar = 0.92;
             double euro = 1.08;
-            
+            double num1;
+            double num2;
+
             if(n1.equals("")){
-                double num1 = 0;
+                num1 = 0;
             }else{
-                double num1 = Double.parseDouble(n1);
+                num1 = Double.parseDouble(n1);
             }
             if(n2.equals("")){
-                double num2 = 0;
+                num2 = 0;
             }else{
-                double num2 = Double.parseDouble(n2);
+                num2 = Double.parseDouble(n2);
             }
 
             if(option.equals("D")){
