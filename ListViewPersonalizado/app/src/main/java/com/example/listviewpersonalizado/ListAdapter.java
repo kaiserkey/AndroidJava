@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,9 +35,7 @@ public class ListAdapter extends ArrayAdapter<Inmueble> {
 
         Inmueble inmueble = lista.get(position);
 
-        itemView.setOnClickListener(new View.OnClickListener() {
-
-        })
+        ImageView foto = itemView.findViewById(R.id.foto);
 
     }
 }
