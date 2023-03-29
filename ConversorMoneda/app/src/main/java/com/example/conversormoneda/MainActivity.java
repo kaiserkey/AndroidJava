@@ -28,12 +28,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        viewModel.getRadio().observe(this, new Observer<Boolean>(){
-//            @Override
-//            public void onChanged(Boolean convert) {
-//                binding.radioED
-//            }
-//        });
+        if(!binding.radioED.isChecked() && !binding.radioDE.isChecked()){
+            binding.inputDolares.setEnabled(false);
+            binding.inputEuros.setEnabled(false);
+        }
 
         binding.radioDE.setOnClickListener(new View.OnClickListener() {
             @Override
