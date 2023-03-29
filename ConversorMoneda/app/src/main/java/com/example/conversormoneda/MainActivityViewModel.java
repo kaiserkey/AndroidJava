@@ -14,7 +14,6 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     private Context context;
     private MutableLiveData<Double> resultado = null;
-    private MutableLiveData<Boolean> radio = null;
     public MainActivityViewModel(@NonNull Application application) {
         super(application);
         this.context = application.getApplicationContext();
@@ -25,13 +24,6 @@ public class MainActivityViewModel extends AndroidViewModel {
             resultado = new MutableLiveData<>();
         }
         return resultado;
-    }
-
-    public LiveData<Boolean> getRadio() {
-        if (radio == null) {
-            radio = new MutableLiveData<>();
-        }
-        return radio;
     }
 
 
