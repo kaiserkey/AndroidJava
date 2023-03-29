@@ -9,7 +9,7 @@ import com.example.conversormoneda.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
-    private ActivityMainViewModel viewModel;
+    private MainActivityViewModel viewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
