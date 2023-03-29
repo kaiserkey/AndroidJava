@@ -34,5 +34,9 @@ public class ListAdapter extends ArrayAdapter<Inmueble> {
 
         Inmueble inmueble = lista.get(position);
 
+        itemView.setOnClickListener(new View.OnClickListener() {
+
+        })
+
     }
 }
