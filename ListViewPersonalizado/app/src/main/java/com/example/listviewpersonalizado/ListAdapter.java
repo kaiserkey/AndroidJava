@@ -11,8 +11,8 @@ import java.util.List;
 
 public class ListAdapter extends ArrayAdapter<Inmueble> {
 
-    public ListAdapter(@NonNull Context context, int resource, @NonNull List<Inmueble> objects, LayoutInflater layout) {
+    public ListAdapter(@NonNull Context context, int resource, @NonNull List<Inmueble> objects, LayoutInflater li) {
         super(context, resource, objects);
-        
+        this.conte
     }
 }
