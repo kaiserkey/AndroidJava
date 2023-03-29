@@ -32,11 +32,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String option = "";
-                if(binding.radioDE.hasFocus()){
-                    option = "dolar";
+                if(binding.radioDE.isChecked()){
+                    binding.radioED.setChecked(false);
+                    option = "D";
                 }
-                if(binding.radioED.hasFocus()){
-                    option = "euro";
+                if(binding.radioED.isChecked()){
+                    binding.radioDE.setChecked(false);
+                    option = "E";
                 }
                 viewModel.calcular(binding.inputDolares.getText().toString(),binding.inputEuros.getText().toString(), option);
             }

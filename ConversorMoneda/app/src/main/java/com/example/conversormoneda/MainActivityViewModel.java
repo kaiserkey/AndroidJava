@@ -14,6 +14,7 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     private Context context;
     private MutableLiveData<Double> resultado = null;
+    private MutableLiveData<String> radio = null;
     public MainActivityViewModel(@NonNull Application application) {
         super(application);
         this.context = application.getApplicationContext();
@@ -26,20 +27,26 @@ public class MainActivityViewModel extends AndroidViewModel {
         return resultado;
     }
 
+    public LiveData<String> getRadio() {
+        if (radio == null) {
+            radio = new MutableLiveData<>();
+        }
+        return radio;
+    }
+
     public void calcular(String n1, String n2, String option){
         try {
             double dolar = 0.92;
             double euro = 1.08;
             double num1 = Float.parseFloat(n1);
             double num2 = Float.parseFloat(n2);
-
-            if(option == "dolar"){
-                double res = num2 * dolar;
+            if(option.equals("D")){
+                double res = num1 * dolar;
                 resultado.setValue(res);
             }
 
-            if(option == "euro"){
-                double res = num1 * euro;
+            if(option.equals("E")){
+                double res = num2 * euro;
                 resultado.setValue(res);
             }
 
@@ -48,6 +55,10 @@ public class MainActivityViewModel extends AndroidViewModel {
             Toast.makeText(context, "Solo puedes ingresar numeros", Toast.LENGTH_LONG).show();
         }
 
+    }
+
+    public void radioValue(String value){
+        radio.setValue(value);
     }
 
 }
