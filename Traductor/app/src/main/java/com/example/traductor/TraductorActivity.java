@@ -1,6 +1,7 @@
 package com.example.traductor;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +13,9 @@ public class TraductorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_traductor);
+        binding = ActivityTraducirBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        Intent recuperar = getIntent();
+        binding.textoTraducido.setText(recuperar.getStringExtra("palabra"));
     }
 }
