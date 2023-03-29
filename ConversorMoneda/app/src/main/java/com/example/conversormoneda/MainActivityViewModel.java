@@ -37,9 +37,11 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     public void calcular(String n1, String n2, String option){
         try {
-            System.out.println("Numero1: " + n1 + "Numero2:" +n2);
             double dolar = 0.92;
             double euro = 1.08;
+            if(n2.equals("")){
+                System.out.println("El numero es null");
+            }
             double num1 = Float.parseFloat(n1);
             double num2 = Float.parseFloat(n2);
             if(option.equals("D")){
