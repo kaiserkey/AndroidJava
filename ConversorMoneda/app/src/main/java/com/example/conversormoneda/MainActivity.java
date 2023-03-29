@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         viewModel.getResultado().observe(this, new Observer<Double>() {
             @Override
             public void onChanged(Double convert) {
-                binding.textResult.setText(convert+"");
+                binding.textResultado.setText(convert+"");
             }
         });
 
