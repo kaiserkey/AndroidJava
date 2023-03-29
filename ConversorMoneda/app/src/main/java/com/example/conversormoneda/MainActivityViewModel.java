@@ -62,8 +62,4 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     }
 
-    public void radioValue(Boolean value){
-        radio.setValue(value);
-    }
-
 }
