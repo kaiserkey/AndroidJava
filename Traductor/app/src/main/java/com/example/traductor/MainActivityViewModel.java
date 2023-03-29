@@ -41,7 +41,8 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     public void getTraductor(String palabra) {
         if(traductor.containsKey(palabra)){
-            intent = new Intent(context, )
+            intent = new Intent(context, TraductorActivity.class);
+            
             resultado.setValue(traductor.get(palabra));
         }else{
             resultado.setValue("No encontrada!");

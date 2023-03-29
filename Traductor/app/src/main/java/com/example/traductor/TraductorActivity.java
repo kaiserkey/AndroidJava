@@ -1,2 +1,4 @@
-package com.example.traductor;public class TraductorActivity {
+package com.example.traductor;
+
+public class TraductorActivity {
 }
