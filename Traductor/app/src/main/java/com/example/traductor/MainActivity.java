@@ -29,6 +29,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        binding.inputPalabra.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    binding.inputPalabra.setText("");
+                }
+            }
+        });
+
         binding.btnTraducir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
