@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -38,7 +39,11 @@ public class ListAdapter extends ArrayAdapter<Inmueble> {
         ImageView foto = itemView.findViewById(R.id.foto);
         foto.setImageResource(inmueble.getFoto());
 
-        
+        TextView direccion = itemView.findViewById(R.id.direccion);
+        direccion.setText(inmueble.getDireccion());
+
+        TextView precio = itemView.findViewById(R.id.precio);
+        precio.setText(String.valueOf(inmueble.getPrecio()));
 
     }
 }
