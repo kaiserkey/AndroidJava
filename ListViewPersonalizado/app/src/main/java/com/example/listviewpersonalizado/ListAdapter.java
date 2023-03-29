@@ -36,6 +36,9 @@ public class ListAdapter extends ArrayAdapter<Inmueble> {
         Inmueble inmueble = lista.get(position);
 
         ImageView foto = itemView.findViewById(R.id.foto);
+        foto.setImageResource(inmueble.getFoto());
+
+        
 
     }
 }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/foto"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="24dp"
@@ -22,7 +22,7 @@
         android:layout_height="32dp"
         android:layout_marginStart="16dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/foto"
         tools:layout_editor_absoluteY="24dp" />
 
     <TextView
@@ -31,6 +31,6 @@
         android:layout_height="32dp"
         android:layout_marginStart="16dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/foto"
         tools:layout_editor_absoluteY="70dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
