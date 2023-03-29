@@ -27,6 +27,7 @@ public class ListAdapter extends ArrayAdapter<Inmueble> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        itemView = li.inflate(R.layout.item, parent, false);
         
     }
 }
