@@ -45,5 +45,7 @@ public class ListAdapter extends ArrayAdapter<Inmueble> {
         TextView precio = itemView.findViewById(R.id.precio);
         precio.setText(String.valueOf(inmueble.getPrecio()));
 
+        return itemView;
+
     }
 }
