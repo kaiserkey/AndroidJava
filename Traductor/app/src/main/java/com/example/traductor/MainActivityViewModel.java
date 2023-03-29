@@ -2,6 +2,7 @@ package com.example.traductor;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -13,11 +14,12 @@ import java.util.Map;
 
 public class MainActivityViewModel extends AndroidViewModel {
     private Context context;
+    private Intent intent;
 
     private MutableLiveData<String> resultado = null;
     private HashMap<String, String> traductor = new HashMap<>();
 
-    
+
 
     public MainActivityViewModel(@NonNull Application application) {
         super(application);
@@ -39,6 +41,7 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     public void getTraductor(String palabra) {
         if(traductor.containsKey(palabra)){
+            intent = new Intent(context, )
             resultado.setValue(traductor.get(palabra));
         }else{
             resultado.setValue("No encontrada!");
