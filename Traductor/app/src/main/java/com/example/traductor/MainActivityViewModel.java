@@ -17,6 +17,8 @@ public class MainActivityViewModel extends AndroidViewModel {
     private MutableLiveData<String> resultado = null;
     private HashMap<String, String> traductor = new HashMap<>();
 
+    
+
     public MainActivityViewModel(@NonNull Application application) {
         super(application);
         context = application.getApplicationContext();
