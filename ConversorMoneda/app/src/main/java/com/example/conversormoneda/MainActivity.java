@@ -32,9 +32,6 @@ public class MainActivity extends AppCompatActivity {
         //    binding.inputDolares.setEnabled(false);
         //    binding.inputEuros.setEnabled(false);
         //}
-
-
-
         binding.radioDE.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
