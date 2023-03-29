@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -12,6 +13,8 @@ import com.example.traductor.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private MainActivityViewModel viewModel;
+
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +28,12 @@ public class MainActivity extends AppCompatActivity {
         viewModel.getResultado().observe(this, new Observer<String>(){
             @Override
             public void onChanged(String resultado) {
+
                 binding.textResult.setText(resultado);
+                intent = new Intent(MainActivity.this, TraductorActivity.class);
+                intent.putExtra("palabra", resultado);
+                //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
             }
         });
 
