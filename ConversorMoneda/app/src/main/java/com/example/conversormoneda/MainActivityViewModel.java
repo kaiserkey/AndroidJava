@@ -34,8 +34,10 @@ public class MainActivityViewModel extends AndroidViewModel {
         return radio;
     }
 
+
     public void calcular(String n1, String n2, String option){
         try {
+            System.out.println("Numero1: " + n1 + "Numero2:" +n2);
             double dolar = 0.92;
             double euro = 1.08;
             double num1 = Float.parseFloat(n1);
