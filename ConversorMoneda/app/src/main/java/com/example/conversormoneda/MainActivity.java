@@ -28,10 +28,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        if(!binding.radioED.isChecked() && !binding.radioDE.isChecked()){
-            binding.inputDolares.setEnabled(false);
-            binding.inputEuros.setEnabled(false);
-        }
+        //if(!binding.radioED.isChecked() && !binding.radioDE.isChecked()){
+        //    binding.inputDolares.setEnabled(false);
+        //    binding.inputEuros.setEnabled(false);
+        //}
+
+
 
         binding.radioDE.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,14 +59,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String option = "";
                 if(binding.radioDE.isChecked()){
-
                     option = "D";
+                    viewModel.calcular(binding.inputDolares.getText().toString(), option);
                 }
                 if(binding.radioED.isChecked()){
 
                     option = "E";
+                    viewModel.calcular(binding.inputEuros.getText().toString(), option);
                 }
-                viewModel.calcular(binding.inputDolares.getText().toString(),binding.inputEuros.getText().toString(), option);
             }
         });
 

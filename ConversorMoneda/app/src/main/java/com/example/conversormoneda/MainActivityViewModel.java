@@ -27,32 +27,25 @@ public class MainActivityViewModel extends AndroidViewModel {
     }
 
 
-    public void calcular(String n1, String n2, String option){
+    public void calcular(String num, String option){
         try {
             double dolar = 0.92;
             double euro = 1.08;
             double num1;
-            double num2;
+            double res;
 
-            if(n1.equals("")){
+            if(num.equals("")){
                 num1 = 0;
-            }else{
-                num1 = Double.parseDouble(n1);
-            }
-            if(n2.equals("")){
-                num2 = 0;
-            }else{
-                num2 = Double.parseDouble(n2);
-            }
-
-            if(option.equals("D")){
-                double res = num1 * dolar;
-                resultado.setValue(res);
-            }
-
-            if(option.equals("E")){
-                double res = num2 * euro;
-                resultado.setValue(res);
+            }else {
+                num1 = Double.parseDouble(num);
+                if(option.equals("D")){
+                    res = num1 * dolar;
+                    resultado.setValue(res);
+                }
+                if(option.equals("E")){
+                    res = num1 * euro;
+                    resultado.setValue(res);
+                }
             }
 
         }
