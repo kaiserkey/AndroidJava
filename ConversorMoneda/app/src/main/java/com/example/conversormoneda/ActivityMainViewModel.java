@@ -1,5 +1,5 @@
 package com.example.conversormoneda;
 
-public class MainActivityViewModel {
+public class ActivityMainViewModel {
 
 }
