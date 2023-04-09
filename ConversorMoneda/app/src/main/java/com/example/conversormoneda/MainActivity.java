@@ -12,6 +12,8 @@ import com.example.conversormoneda.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private MainActivityViewModel viewModel;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(MainActivityViewModel.class);
-
         viewModel.getResultado().observe(this, new Observer<Double>() {
             @Override
             public void onChanged(Double convert) {
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         //    binding.inputDolares.setEnabled(false);
         //    binding.inputEuros.setEnabled(false);
         //}
+
         binding.radioDE.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +68,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 }
